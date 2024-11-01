@@ -117,3 +117,16 @@ ReactDOM.createPortal(child, container);
 
 ● 第一个参数 child 是可渲染的 React 子项，比如元素，字符串或者片段等;
 ● 第二个参数 container 是一个 DOM 元素。
+
+
+### Fast Refresh是什么
+
+导出多个react组件不会触发 Fast Refresh的警告
+Fast Refresh 是react的一种热更新机制，旨在提高开发体验，允许开发者在修改代码后立即查看更改，而不丢失组件的状态。
+当一个文件中包含多个导出（例如，组件和常量、工具函数等）时，fast refresh将无法确定如何处理这些变化，可能会导致状态丢失或其他问题
+**解决方案**：要解决这个问题，你需要将常量或函数移动到单独的文件中，只在一个文件中导出react组件。
+Fast refresh对hooks的支持
+1. 状态保留：fast refresh会尽可能保留组件的状态。
+2. 依赖项处理：他们会始终更新，依赖项列表会被忽略
+3. 类组件 vs 函数组件：对于类组件，fast refresh会重置状态，而对于函数组件，fast refresh则尽量保留已有的状态，这使得函数组件在使用fast refresh时体验更好
+4. 潜在问题：Fast Refresh在某些情况下可能导致意外行为。例如，如果一个文件同时导出 react 组件和其他内容（如常量和函数），则可能无法正常保留状态
