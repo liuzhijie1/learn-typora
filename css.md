@@ -35,3 +35,50 @@ body {
 ###### rem单位是怎么计算的？
 
 rem 单位是CSS中的一种相对单位，他相当于文档的根元素\<html\> 的字体大小来计算长度，rem单位的主要有点在于它提供了一种全局的相对尺寸，使得整个页面的布局可以统一缩放
+
+###### CSS inherited proprtyies cheatsheet
+
+```css
+border-collapse
+border-spacing
+caption-side
+color
+cursor
+direction
+empty-cells
+font-family
+font-size
+font-style
+font-variant
+font-weight
+font-size-adjust
+font-stretch
+font
+letter-spacing
+line-height
+list-style-image
+list-style-position
+list-style-type
+list-style
+orphans
+quotes
+tab-size
+text-align
+text-align-last
+text-decoration-color
+text-indent
+text-justify
+text-shadow
+text-transform
+visibility
+white-space
+widows
+word-break
+word-spacing
+word-wrap
+```
+
+###### window.devicePixelRatio 的含义
+
+它代表了物理像素和CSS像素之间的比值，在不同的显示设备，所对应的值也是不一样的。
+
